@@ -4,15 +4,11 @@ The workkshop targets current HPC users and those willing to use HPC resources a
 
 ### Schedule
 900-930
-
-930-1100 
-
 # Introduction to HPC Technologies
 ### Editors
 # Unix Shell
 ### Connecting to HPC cluster
 ### File Management
-
 # Working with the cluster
  ### Environment Modules – A Great Tool for Clusters
  ### PBS scheduler
