@@ -18,18 +18,14 @@ laptop or workstation is a computational resource that is used mostly by one use
 -_pbsnodes -a_ - * check state on the nodes (state, np, properties, memory, etc) *
 
 - A first exercise would be to submit a job that does nothing else but print “Hello World!”.
--_touch hello.sh_
+- _touch hello.sh_
 using an editor (nano,pico,vim,emacs) open hello.sh script and add the following
--_#!/bin/bash_
+- _#!/bin/bash_
 
--_hostname_
--_date_
--_sleep 30_
--_date_
+- _hostname_
+- _date_
+- _sleep 30_
+- _date_
 
-b)A
-
-
-qsub echo Hello World.sh
 
 
