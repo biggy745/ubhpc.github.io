@@ -1,6 +1,6 @@
 # UB HPC TRAINING WORKSHOP
 ## 13/03/2018
-The workkshop targets current HPC users and those willing to use HPC resources available in UB.
+The workshop targets current HPC users and those willing to use HPC resources available in UB.
 
 ### Schedule
 900-930
@@ -9,7 +9,7 @@ The workkshop targets current HPC users and those willing to use HPC resources a
 # Unix Shell
 ### Connecting to HPC cluster
 ### File Management
-# [Working with the cluster]
+# [Working with the cluster](www.cs.ub.bw)
  ### Environment Modules – A Great Tool for Clusters
  ### PBS scheduler
  #
