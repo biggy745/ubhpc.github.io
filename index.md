@@ -1,19 +1,20 @@
-## UB HPC TRAINING WORKSHOP
+# UB HPC TRAINING WORKSHOP
+## 13/03/2018
+The workkshop targets current HPC users and those willing to use HPC resources available in UB.
 
-You can use the [editor on GitHub](https://github.com/biggy745/ubhpc.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+### Schedule
+900-930
+930-1100 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# Introduction to HPC Technologies
+## Editors
+# Unix Shell
+## Connecting to HPC cluster
+## File Management
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
+# Working with the cluster
+ ## Environment Modules – A Great Tool for Clusters
+ ## PBS scheduler
 
 - Bulleted
 - List
