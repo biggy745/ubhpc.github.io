@@ -10,8 +10,8 @@ The workshop targets current HPC users and those willing to use HPC resources av
 ### Connecting to HPC cluster
 ### File Management
 # Working with the cluster
- ### Environment Modules – A Great Tool for Clusters
- ### PBS scheduler
+ ### [Environment Modules – A Great Tool for Clusters](modules)
+ ### [PBS scheduler](scheduler)
  
 
 - Bulleted
