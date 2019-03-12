@@ -1,15 +1,14 @@
-# SCHEDULERS-
+# SCHEDULER- Portable Batch System
 
-- Super computers or compute clusters, the competition among users to obtain time to run programs is typically fierce
-- On the other hand, expectations by users are high, that their code will run very fast and provide them with answers to their scientific questions at a high turn-around rate
+- Super computers or compute clusters, the competition among users to obtain time to run programs is typically fierce.
 - Supercomputers provide excellent performance, and distribute performance among all users in a fair manner.
+- Users expect that their code will run very fast and provide them with answers to their scientific questions at a high turn-around rate. 
 - On a laptop or workstation any request for CPU time is immediately handled by the operating system
-laptop or workstation is a computational resource that is used mostly by one user only - namely you
+- Laptop or workstation is a computational resource that is used mostly by one user only - namely you
 - A super computer is a shared resource. Many users can log into it at the same time and work on your code, perform computations 
 - In order to prevent clashes of tasks that require time on the machine exclusively, every action on the cluster needs to be described by a user. An application called the job scheduler then uses this description to decide when and where to best place the action for execution.
-
 - We have a 12-node cluster. Each individual computer in the cluster (also called a node) has 16 CPU cores, 32GB of memory and a connection to a network that all nodes are members of and can hence communicate by.
--A job scheduler is put in place on a compute cluster that manages tasks on it. It accepts task (or better ‘job’) descriptions. Based on the current usage of the nodes, it can then decide when a task is launched (or dispatched or spooled in HPC speak) on a node. The scheduler also helps treating the output of a job to forward it to the submitter’s terminal or write it to a file.
+- A job scheduler(pbs,torque,slurm) is put in place on a compute cluster that manages tasks on it. It accepts task (or better ‘job’) descriptions. Based on the current usage of the nodes, it can then decide when a task is launched (or dispatched or spooled in HPC speak) on a node. The scheduler also helps treating the output of a job to forward it to the submitter’s terminal or write it to a file.
 
 # PBS script
 - #PBS –N jobname ---> name of the job
@@ -60,33 +59,40 @@ directory from which the batch job was submitted.
 
 - PBS_JOBNAME ---> Name of the job.
 
-# Exercises
+# Exercise 1
+   ## Objectives
+     - check the nodes in a cluster
+     - run a simple job submission script 
 
-1. ## On your terminal
+a). ## On your terminal issue the command
 
--_pbsnodes -a_ - * check state on the nodes (state, np, properties, memory, etc) *
+-_pbsnodes -a_ - **check state on the nodes (state, np, properties, memory, etc)** 
 
-- A first exercise would be to submit a job that does nothing else but print “Hello World!”.
-- _touch hello.sh_
-using an editor (nano,pico,vim,emacs) open hello.sh script and add the following
+b) In this exercise you would submit a job that print hostname, date and “Hello World"
+- create a file with command  **_touch hello.sh_**
+
+c) Using an editor of your choice(nano,pico,vim,emacs) open hello.sh script and add the following lines;
+
 - _#!/bin/bash_
-
 - _hostname_
 - _date_
 - _sleep 30_
 - _date_
 
-## use *qstat* command to check the status of the job you submitted.
+d) **use *qstat* command to check the status of the job you submitted.
 
-# 2. Submit R scipt to PBS
-- In you home directory create a folder and name it Rtest.create a file in direcory Rtest with command <touch mean.R> and paste the code below 
+# Exercise 2. 
+   ## objectives
+       - write a simple rscript
+       - submit rscript to PBS
+
+a) on the command prompt issue a command _mkdir Rtest_ to create a folder. Create a file in Rtest with command <touch mean.R> then copy and paste the code below using any editor. 
 - #!/usr/bin/env Rscript
 - n <- c(2, 3, 5, 10, 14)
 - mean(n)
-
 **Save and close the file** 
 
-- Now create a pbs script with  the command < touch rpbs.sh>, add the code below
+b) Issue a command _touch rpbs.sh_ to create a pbs script. Add the code below
 
 **#!/bin/sh**
 **##PBS -l nodes=2:ppn=8**
@@ -104,9 +110,9 @@ using an editor (nano,pico,vim,emacs) open hello.sh script and add the following
 
 ## save and close the file.
 
-- submit the job with the command _<qsub rpbs.sh_
-- chech the status of your job with _<qstat_
-- When the job has completed navigate to Rtest direcory to view your files created
+c) submit the job with the command _<qsub rpbs.sh_
+d) chech the status of your job with _<qstat_
+e)  When the job has completed navigate to Rtest direcory to view your files created
 
 
 
