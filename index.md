@@ -3,7 +3,6 @@
 The workshop targets current HPC users and those willing to use HPC resources available in UB.
 
 ### Schedule
-900-930
 # Introduction to HPC Technologies
 ### Editors
 # Unix Shell
