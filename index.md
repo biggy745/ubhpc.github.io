@@ -9,7 +9,7 @@ The workshop targets current HPC users and those willing to use HPC resources av
 # Unix Shell
 ### Connecting to HPC cluster
 ### File Management
-# Working with the cluster[link](www.cs.ub.bw)
+[# Working with the cluster](www.cs.ub.bw)
  ### Environment Modules – A Great Tool for Clusters
  ### PBS scheduler
  #
