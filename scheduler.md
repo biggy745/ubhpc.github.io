@@ -122,5 +122,4 @@ d) chech the status of your job with _<qstat_
 e)  When the job has completed navigate to Rtest direcory to view your files created
 
 
-
-
+  For Support Contact sehurutshib@ub.ac.bw
