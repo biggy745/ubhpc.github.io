@@ -104,8 +104,8 @@ b) Issue a command _touch rpbs.sh_ to create a pbs script. Add the code below
      ##PBS -l walltime=00:01:00
      ##PBS -N mean**
      ##PBS -M <email address> 
-     ##PBS -e /home/username/Rtest/std_err.err
-     ##PBS -o /home/username/Rtest/std_out.
+     ##PBS -e /home/username/Rtest/std.err
+     ##PBS -o /home/username/Rtest/std.out
 
     module load R/3.5.0/gcc-6.2.0
 
