@@ -67,11 +67,11 @@
 
 a). ## On your terminal issue the command
 
-    _pbsnodes -a_ - **check state on the nodes (state, np, properties, memory, etc)** 
+     pbsnodes -a --> **check state on the nodes (state, np, properties, memory, etc)** 
 
 b) In this exercise you would submit a job that print hostname, date and “Hello World"
 
-    create a file with command  **_touch hello.sh_**
+    create a file with command touch hello.sh
 
 c) Using an editor of your choice(nano,pico,vim,emacs) open hello.sh script and add the following lines;
 
@@ -79,16 +79,17 @@ c) Using an editor of your choice(nano,pico,vim,emacs) open hello.sh script and 
      hostname
      date
      sleep 30
+     echo "Hello HPC"
      date
 
-d) **use *qstat* command to check the status of the job you submitted.
+d) Use qstat command to check the status of the job you submitted.
 
 # Exercise 2. 
    ## objectives
        - write a simple rscript
        - submit rscript to PBS
 
-a) On the command prompt issue a command _mkdir Rtest_ to create a folder. Create a file in Rtest with command <touch mean.R> then copy and paste the code below using any editor. 
+a) On the command prompt issue a command _mkdir Rtest_ to create a folder. Create a file in Rtest with command _touch mean.R_ then copy and paste the code below using any editor. 
    
     #!/usr/bin/env Rscript
     n <- c(2, 3, 5, 10, 14)
