@@ -115,11 +115,11 @@ b) Issue a command _touch rpbs.sh_ to create a pbs script. Add the code below
 
 ## save and close the file.
 
-c) submit the job with the command _<qsub rpbs.sh_
+c) submit the job with the command _qsub rpbs.sh_
 
-d) chech the status of your job with _<qstat_
+d) chech the status of your job with _qstat_
 
 e)  When the job has completed navigate to Rtest direcory to view your files created
 
 
-  For Support Contact sehurutshib@ub.ac.bw
+  For Support Contact _sehurutshib@ub.ac.bw_
