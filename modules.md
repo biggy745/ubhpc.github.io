@@ -13,7 +13,7 @@ With modules you can keep both compiler versions on the system and move between 
 #### module unload - To unload or remove a module
 
 ## _Exercise 1_
-   ### Objectives
+     Objectives
         view software installed
         load openmpi and R 
        
