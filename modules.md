@@ -32,6 +32,6 @@ With modules you can keep both compiler versions on the system and move between 
 
 
 
-                                      Support or Contact sehurutshib@ub.ac.bw
+         Support or Contact sehurutshib@ub.ac.bw
 
 
