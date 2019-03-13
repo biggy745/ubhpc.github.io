@@ -37,7 +37,7 @@
 
 # PBS Job States
 
-    - F ---> Job has Finished exiting and execution. The job was completed
+    F ---> Job has Finished exiting and execution. The job was completed
      successfully and had no application errors.
 
      - H ---> Job is Held. A job is put into a held state by the server or by a user or
@@ -116,7 +116,9 @@ b) Issue a command _touch rpbs.sh_ to create a pbs script. Add the code below
 ## save and close the file.
 
 c) submit the job with the command _<qsub rpbs.sh_
+
 d) chech the status of your job with _<qstat_
+
 e)  When the job has completed navigate to Rtest direcory to view your files created
 
 
