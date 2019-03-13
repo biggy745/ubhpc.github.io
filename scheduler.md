@@ -40,7 +40,7 @@
     F ---> Job has Finished exiting and execution. The job was completed
      successfully and had no application errors.
 
-     - H ---> Job is Held. A job is put into a held state by the server or by a user or
+    H ---> Job is Held. A job is put into a held state by the server or by a user or
      administrator. A job stays in a held state until it is released by a user or
      administrator.
 
