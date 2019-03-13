@@ -11,53 +11,54 @@
 - A job scheduler(pbs,torque,slurm) is put in place on a compute cluster that manages tasks on it. It accepts task (or better ‘job’) descriptions. Based on the current usage of the nodes, it can then decide when a task is launched (or dispatched or spooled in HPC speak) on a node. The scheduler also helps treating the output of a job to forward it to the submitter’s terminal or write it to a file.
 
 # PBS script
-- #PBS –N jobname ---> name of the job
-- #PBS -o job.out ---> output file
-- #PBS -e job.err ---> error file
-- #PBS -l nodes=4:ppn=2  ---> The number of nodes and processors per node.
-- #PBS -l walltime=1:00:00 ---> hh:mm:ss
-- #PBS -l mem=n{mb|gb} ---> Sets the maximum amount of memory allocated to the job.
+      #PBS –N jobname ---> name of the job
+      #PBS -o job.out ---> output file
+      #PBS -e job.err ---> error file
+      #PBS -l nodes=4:ppn=2  ---> The number of nodes and processors per node.
+      #PBS -l walltime=1:00:00 ---> hh:mm:ss
+      #PBS -l mem=n{mb|gb} ---> Sets the maximum amount of memory allocated to the job.
 
 
 # PBS commands
 
-- qsub <job_script> --> Your job will be submitted to the PBS scheduler and executed
-when there will be nodes available.
+    qsub <job_script> --> Your job will be submitted to the PBS scheduler and executed
+    when there will be nodes available.
 
-- qstat -a --> Shows the list of all your scheduled jobs, along with their status
+    qstat -a --> Shows the list of all your scheduled jobs, along with their status
 
-- qstat -f <job_id> --> Provides a long list of informations for the job requested.
-In particular, if your job isn’t running yet, you'll be notified about its
-estimated start time or, if you made an error on the job script, you will
-learn that the job won’t ever start.
+    qstat -f <job_id> --> Provides a long list of informations for the job requested.
+    In particular, if your job isn’t running yet, you'll be notified about its
+    estimated start time or, if you made an error on the job script, you will
+    learn that the job won’t ever start.
 
-- qdel <job_id> ---> Removes the job from the scheduled jobs by killing it.
-
-- qhold <jobid> Place a hold on your job in the queue and stops it from running.
+    qdel <job_id> ---> Removes the job from the scheduled jobs by killing it.
+   
+    qhold <jobid> Place a hold on your job in the queue and stops it from running.
 
 # PBS Job States
-- F ---> Job has Finished exiting and execution. The job was completed
-successfully and had no application errors.
 
-- H ---> Job is Held. A job is put into a held state by the server or by a user or
-administrator. A job stays in a held state until it is released by a user or
-administrator.
+    - F ---> Job has Finished exiting and execution. The job was completed
+     successfully and had no application errors.
 
-- Q ---> Job is Queued, eligible to run or be routed.
+     - H ---> Job is Held. A job is put into a held state by the server or by a user or
+     administrator. A job stays in a held state until it is released by a user or
+     administrator.
 
-- R ---> Job is Running.
+    Q ---> Job is Queued, eligible to run or be routed.
 
-- S ---> Job is Suspended by server. A job is put into the suspended state when a
-higher priority job needs the resources.
+    R ---> Job is Running.
+
+    S ---> Job is Suspended by server. A job is put into the suspended state when a
+    higher priority job needs the resources.
 
 # PBS Variables
 
-- PBS_O_WORKDIR ---> PBS sets the environment variable PBS_O_WORKDIR to the
-directory from which the batch job was submitted.
+    PBS_O_WORKDIR ---> PBS sets the environment variable PBS_O_WORKDIR to the
+    directory from which the batch job was submitted.
 
-- PBS_NODEFILE ---> Contains a list of the nodes assigned to the job.
+    PBS_NODEFILE ---> Contains a list of the nodes assigned to the job.
 
-- PBS_JOBNAME ---> Name of the job.
+    PBS_JOBNAME ---> Name of the job.
 
 # Exercise 1
    ## Objectives
@@ -66,18 +67,19 @@ directory from which the batch job was submitted.
 
 a). ## On your terminal issue the command
 
--_pbsnodes -a_ - **check state on the nodes (state, np, properties, memory, etc)** 
+    _pbsnodes -a_ - **check state on the nodes (state, np, properties, memory, etc)** 
 
 b) In this exercise you would submit a job that print hostname, date and “Hello World"
-- create a file with command  **_touch hello.sh_**
+
+    create a file with command  **_touch hello.sh_**
 
 c) Using an editor of your choice(nano,pico,vim,emacs) open hello.sh script and add the following lines;
 
-- _#!/bin/bash_
-- _hostname_
-- _date_
-- _sleep 30_
-- _date_
+     #!/bin/bash
+     hostname
+     date
+     sleep 30
+     date
 
 d) **use *qstat* command to check the status of the job you submitted.
 
@@ -86,27 +88,29 @@ d) **use *qstat* command to check the status of the job you submitted.
        - write a simple rscript
        - submit rscript to PBS
 
-a) on the command prompt issue a command _mkdir Rtest_ to create a folder. Create a file in Rtest with command <touch mean.R> then copy and paste the code below using any editor. 
-- #!/usr/bin/env Rscript
-- n <- c(2, 3, 5, 10, 14)
-- mean(n)
+a) On the command prompt issue a command _mkdir Rtest_ to create a folder. Create a file in Rtest with command <touch mean.R> then copy and paste the code below using any editor. 
+   
+    #!/usr/bin/env Rscript
+    n <- c(2, 3, 5, 10, 14)
+    mean(n)
+    
 **Save and close the file** 
 
 b) Issue a command _touch rpbs.sh_ to create a pbs script. Add the code below
 
-**#!/bin/sh**
-**##PBS -l nodes=2:ppn=8**
-**##PBS -l walltime=00:01:00**
-**##PBS -N mean**
-**##PBS -M <email address> 
-**##PBS -e /home/username/Rtest/std_err.txt
-**##PBS -o /home/username/Rtest/std_out.txt
+     #!/bin/sh
+     ##PBS -l nodes=2:ppn=8
+     ##PBS -l walltime=00:01:00
+     ##PBS -N mean**
+     ##PBS -M <email address> 
+     ##PBS -e /home/username/Rtest/std_err.txt
+     ##PBS -o /home/username/Rtest/std_out.txt
 
-**module load R/3.5.0/gcc-6.2.0
+    module load R/3.5.0/gcc-6.2.0
 
- **cd $PBS_O_WORKDIR
+    cd $PBS_O_WORKDIR
 
- **R --file=/home/username/Rtest/mean.R
+    R --file=/home/username/Rtest/mean.R
 
 ## save and close the file.
 
