@@ -8,26 +8,26 @@ With modules you can keep both compiler versions on the system and move between 
 
 # Using Environment Modules
 
-##### module avail - check is what modules are available to you.
-##### module list - check which modules are “loaded” in your environment
-##### module unload - To unload or remove a module
+        module avail - check is what modules are available to you.
+        module list - check which modules are “loaded” in your environment
+        module unload - To unload or remove a module
 
 ## _Exercise 1_
      Objectives
         view software installed
         load openmpi and R 
        
-- On your terminal type the following commands       
-##### module avail
-##### which openmpi 
-##### module load module load openmpi/2.1.1/gcc-4.4.7 
-##### which openmpi
-##### module list
+- On your terminal type the following commands     
 
+         module avail
+         which openmpi 
+         module load module load openmpi/2.1.1/gcc-4.4.7 
+         which openmpi
+         module list
 
-##### which R 
-##### module load R/3.4.5
-##### which R
+         which R 
+         module load R/3.4.5
+         which R
 
 
 
