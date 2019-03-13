@@ -8,9 +8,9 @@ With modules you can keep both compiler versions on the system and move between 
 
 # Using Environment Modules
 
-#### module avail - check is what modules are available to you.
-#### module list - check which modules are “loaded” in your environment
-#### module unload - To unload or remove a module
+##### module avail - check is what modules are available to you.
+##### module list - check which modules are “loaded” in your environment
+##### module unload - To unload or remove a module
 
 ## _Exercise 1_
      Objectives
