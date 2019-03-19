@@ -100,12 +100,12 @@ a) On the command prompt issue a command _mkdir Rtest_ to create a folder. Creat
 b) Issue a command _touch rpbs.sh_ to create a pbs script. Add the code below
 
      #!/bin/sh
-     ##PBS -l nodes=2:ppn=8
-     ##PBS -l walltime=00:01:00
-     ##PBS -N mean**
-     ##PBS -M <email address> 
-     ##PBS -e /home/username/Rtest/std.err
-     ##PBS -o /home/username/Rtest/std.out
+     #PBS -l nodes=2:ppn=8
+     #PBS -l walltime=00:01:00
+     #PBS -N mean**
+     #PBS -M <email address> 
+     #PBS -e /home/username/Rtest/std.err
+     #PBS -o /home/username/Rtest/std.out
 
     module load R/3.5.0/gcc-6.2.0
 
