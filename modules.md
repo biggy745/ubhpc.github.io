@@ -21,7 +21,7 @@ With modules you can keep both compiler versions on the system and move between 
 
          module avail
          which openmpi 
-         module load module load openmpi/2.1.1/gcc-4.4.7 
+         module load openmpi/2.1.1/gcc-4.4.7 
          which openmpi
          module list
 
